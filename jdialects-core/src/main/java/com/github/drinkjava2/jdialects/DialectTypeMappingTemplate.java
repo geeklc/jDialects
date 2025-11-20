@@ -818,7 +818,7 @@ public class DialectTypeMappingTemplate {
         m.put(BIT, "bit");
         m.put(BLOB, "longblob");
         m.put(BOOLEAN, "bit");
-        m.put(CHAR, "char(1)");
+        m.put(CHAR, "char($l)");
         m.put(CLOB, "longtext");
         m.put(DATE, "date");
         m.put(DECIMAL, "decimal($p,$s)");
@@ -926,7 +926,7 @@ public class DialectTypeMappingTemplate {
         m.put(Type.LONGBLOB,"longblob");
         m.put(Type.BLOB, "blob");
         m.put(Type.BOOLEAN, "bit");
-        m.put(Type.CHAR, "char($p)");
+        m.put(Type.CHAR, "char($l)");
         m.put(Type.CLOB, "longtext");
         m.put(Type.DATE, "date");
         m.put(Type.DOUBLE, "double precision");
@@ -1114,7 +1114,7 @@ public class DialectTypeMappingTemplate {
         m.put(BIT, "bool");
         m.put(BLOB, "oid");
         m.put(BOOLEAN, "boolean");
-        m.put(CHAR, "char(1)");
+        m.put(CHAR, "char($l)");
         m.put(CLOB, "text");
         m.put(DATE, "date");
         m.put(DECIMAL, "numeric($p, $s)");
@@ -1286,7 +1286,7 @@ public class DialectTypeMappingTemplate {
         m.put(TIMESTAMP, "datetime2");
         m.put(TINYINT, "smallint");
         m.put(VARBINARY, "varbinary($l)<8000|varbinary(MAX)");
-        m.put(VARCHAR, "nvarchar($l)<8000|nvarchar(MAX)");
+        m.put(VARCHAR, "nvarchar($l)<4000|nvarchar(MAX)");
 
         m = Dialect.SQLServer2005Dialect.typeMappings;
         m.putAll(Dialect.SQLServerDialect.typeMappings);//extends from SQLServerDialect
