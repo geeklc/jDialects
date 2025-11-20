@@ -947,7 +947,7 @@ public class DialectTypeMappingTemplate {
         m.put(Type.BIGINT, "bigint");
         m.put(Type.YEAR, "year($l)");
         m.put(Type.VARCHAR, "varchar($p)<65535|longtext");
-        m.put(Type.TIMESTAMP, "timestamp");
+        m.put(Type.TIMESTAMP, "datetime");
         m.put(Type.INT, "INT");
         m.put(Type.TINYBLOB, "TINYBLOB");
         m.put(Type.TINYTEXT, "TINYTEXT");
